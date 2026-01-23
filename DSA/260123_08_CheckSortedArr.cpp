@@ -25,6 +25,7 @@ int main() {
     int n;
     cin >> n;
     int arr[n];
+    ArrIn(arr,n);
     
     cout << isSorted(arr,n);
 
