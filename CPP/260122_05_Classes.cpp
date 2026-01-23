@@ -25,11 +25,10 @@ class Car{
         //called automatically
         cout << "Default constructor method" << endl;
     }
+    ;
     Car(string name){//parameterised constructor
         this->name = name;//this keyord -> points to the instance of current object
     }
-
-
     void speedInc(){
         speed += 10;
     }
