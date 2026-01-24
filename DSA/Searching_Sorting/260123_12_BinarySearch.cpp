@@ -15,8 +15,9 @@ void VecOut(const vector<int> &v) {
     cout << endl;
 }
 
-int BinarySearch(vector<int> &nums,int value,int l,int r){
-    while(l<r){    
+int BinarySearch(vector<int> &nums,int value){
+    int l=0,r=nums.size()-1;
+    while(l<=r){    
         int m = (l+r)/2;
         if(nums[m]==value){
             return m;
@@ -28,16 +29,13 @@ int BinarySearch(vector<int> &nums,int value,int l,int r){
 }
 
 int main() {
-    int n;
-    cin >> n;
-
+    
     vector<int> v = {2,4,5,7,8,10,12,15,20};
 
-    int value = 12,l=0,r=v.size()-1;
-    int key = BinarySearch(v,value,l,r);
+    int value = 10;
+    int key = BinarySearch(v,value);
     cout << key;
 
     
-
     return 0;
 }
