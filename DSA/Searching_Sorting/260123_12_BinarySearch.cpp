@@ -29,13 +29,11 @@ int BinarySearch(vector<int> &nums,int value){
 }
 
 int main() {
-    
     vector<int> v = {2,4,5,7,8,10,12,15,20};
 
     int value = 10;
     int key = BinarySearch(v,value);
     cout << key;
-
     
     return 0;
 }
