@@ -5,10 +5,10 @@ using namespace std;
 class class_name{
     datatype var;
     functioins();
+    constructor(){
+    }
 };
 */
-//Constructor
-
 
 class Car{
     // Class do not use memory, only object use memory
