@@ -52,7 +52,5 @@ int main() {
 
     // cout << BinarySearch(arr,23,0,n-1);
 
-    
-
     return 0;
 }
