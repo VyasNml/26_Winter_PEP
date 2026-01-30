@@ -15,10 +15,18 @@ void PrintEven(int n){
     }
 }
 
+int Power(int n,int p){
+    if(p==0)return 1;
+    return n*Power(n,p-1);
+}
+
 int main() {
     int n=10;
     // Print(n);
 
-    PrintEven(n);
+    // PrintEven(n);
+    n=2;
+    int p = 4;
+    cout << Power(n,p) << endl;
     return 0;
 }
