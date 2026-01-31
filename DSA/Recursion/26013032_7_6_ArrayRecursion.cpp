@@ -49,7 +49,7 @@ int main() {
     int arr[5] = {5,8,3,23,12};
 
     cout << LinearSearch(arr,23,n);
-
+    //asbcssd
     // cout << BinarySearch(arr,23,0,n-1);
 
     return 0;
