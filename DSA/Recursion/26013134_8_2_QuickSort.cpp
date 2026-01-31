@@ -44,8 +44,8 @@ void QuickSort(int arr[],int start, int end){
 
     int p = partirion(arr,start,end);
     
-    QuickSort(arr,start,p-1);
-    QuickSort(arr,p+1,end);
+    QuickSort(arr,start,p-1); // left
+    QuickSort(arr,p+1,end);   // right
 }
 
 int main() {
