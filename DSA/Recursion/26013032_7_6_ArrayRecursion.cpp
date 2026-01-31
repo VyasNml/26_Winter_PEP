@@ -33,12 +33,15 @@ int LinearSearch(int arr[],int key,int size){
 }
 
 int BinarySearch(int arr[],int key,int l,int r){
-    // return index
-    int m = (l+r)/2;
-    if(arr[m]==key)return m;
-    else if(arr[m]<key) return BinarySearch(arr,key,m+1,r);
-    else return BinarySearch(arr,23,l,m-1);
-    return -1;
+    if(l>r)return -1;
+    int m = l+(r-l)/2;
+    if(arr[m]==key){
+        return m;
+    }else if(arr[m]<key){
+        return BinarySearch(arr,key,m+1,r);
+    }else{
+        return BinarySearch(arr,key,l,m-1);
+    }
 }
 
 int main() {
@@ -46,11 +49,13 @@ int main() {
     // int arr[n];
     
     int n = 5;
-    int arr[5] = {5,8,3,23,12};
+    int arr[5] = {5,8,12,17,20};
 
-    cout << LinearSearch(arr,23,n);
-    //asbcssd
-    // cout << BinarySearch(arr,23,0,n-1);
+    // cout << LinearSearch(arr,23,n);
+
+    
+    // int arr[5] = {5,8,12,17,20};
+    cout << BinarySearch(arr,17,0,n-1);
 
     return 0;
 }
