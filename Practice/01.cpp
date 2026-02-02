@@ -6,7 +6,7 @@ void printRec(string &str,int n){
     if(n==0)return;
     cout << str << endl;
     printRec(str,n-1);
-}
+} 
 
 int main() {
     string str = "I love Recursion";
