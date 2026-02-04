@@ -96,22 +96,27 @@ void printLL(Node* head){
     }
     cout << endl;
 }
-    
-int main(){
-    Node* head = nullptr;
-    insertAtBegin(head,2);
-    insertAtBegin(head,1);
-    
-    insertAtEnd(head,7);
-    insertAtEnd(head,8);
-    
-    insertAtPos(head,5,3);
-    insertAtPos(head,4,3);
 
-    printLL(head);
-
-    deleteAtPos(head,2);
-    printLL(head);
-
+int countEven(Node* head){
+        int count=0;
+        Node* temp = head;
+        while(temp!=nullptr){
+            if(!(temp->data&1))count++;
+            temp = temp->next;
+        }
+        return count;
+    }
+    
+    int main(){
+        Node* head = nullptr;
+        insertAtEnd(head,33);
+        insertAtEnd(head,42);
+        insertAtEnd(head,18);
+        insertAtEnd(head,11);
+        insertAtEnd(head,17);
+        
+        printLL(head);
+        
+        cout << countEven(head);
     return 0;
 }

@@ -96,22 +96,24 @@ void printLL(Node* head){
     }
     cout << endl;
 }
+
+bool searchLL(Node* head,int key){
+    if(head==nullptr)return false;
+    if(head->data==key)return true;
+    return searchLL(head->next,key);
+}
+
     
 int main(){
     Node* head = nullptr;
-    insertAtBegin(head,2);
-    insertAtBegin(head,1);
+    insertAtEnd(head,33);
+    insertAtEnd(head,42);
+    insertAtEnd(head,18);
+    insertAtEnd(head,11);
+    insertAtEnd(head,17);
     
-    insertAtEnd(head,7);
-    insertAtEnd(head,8);
-    
-    insertAtPos(head,5,3);
-    insertAtPos(head,4,3);
-
     printLL(head);
-
-    deleteAtPos(head,2);
-    printLL(head);
-
+    int key = 18;
+    cout << searchLL(head,key);
     return 0;
 }
