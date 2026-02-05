@@ -18,10 +18,10 @@ int main() {
         cin >> n;
         if(n==0){
             cout << 0;
-            return 0;
+        }else{
+            printDig(n);
         }
-        printDig(n);
         cout << endl;
     }
-        return 0;
-    }
+    return 0;
+}
