@@ -6,14 +6,14 @@
 #include <vector>
 using namespace std;
 
-void VecIn(vector<int> &v, int n) {
+void VecIn(vector<long long> &v, int n) {
     v.resize(n);
     for (int i = 0; i < n; i++) {
         cin >> v[i];
     }
 }
 
-int sufSum(const vector<int> &arr,int m) {
+long long sufSum(vector<long long> &arr,int m) {
     if(m==0)return 0;
     return arr[arr.size()-m]+sufSum(arr,m-1);
 }
@@ -21,11 +21,14 @@ int sufSum(const vector<int> &arr,int m) {
 int main() {
     int n,m;
     cin >> n >> m;
-    if(n==0 || m==0)return 0;
-    vector<int> v;
+    if(n<=0 || m<=0 || m>n){
+        cout << 0 << endl;
+        return 0;
+    }
+    vector<long long> v;
     VecIn(v, n);
-
-    cout << sufSum(v,m);
+    
+    cout << sufSum(v,m) << endl;
 
     return 0;
 }
