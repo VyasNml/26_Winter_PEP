@@ -38,7 +38,7 @@ class MyQueue{
     int getFront(){
         if(front==-1 || front>rear){
             cout << "Empty Queue" << endl;
-            return -1;    
+            return -1;
         }
         return arr[front];
     }
