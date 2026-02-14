@@ -77,6 +77,8 @@ void printTree(Node* root,int x){
     cout << endl;
 }
 
+
+
 int main() {
     Node* root = new Node(1);
     insertNode(root,2);
@@ -84,6 +86,10 @@ int main() {
     insertNode(root,4);
     insertNode(root,5);
     insertNode(root,6);
+    insertNode(root,7);
+    insertNode(root,8);
+    insertNode(root,9);
+    insertNode(root,10);
 
     printTree(root,1);
     printTree(root,2);
